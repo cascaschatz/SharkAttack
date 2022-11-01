@@ -1,38 +1,38 @@
 # SharkAttack
-Project Name
+##Project Name
 
-Project status(Active, On-Hold, Completed)
+##Project status(Active, On-Hold, Completed)
 
-Project objective
+##Project objective
 
-Paragraph with introduction/ objective of project
+###Paragraph with introduction/ objective of project
 
-Methods
+###Methods
 
-List with methods, ex:
+###List with methods, ex:
 
 Filtering
 Grouping
 Visualization
 Technologies
 
-List with used technologies, ex:
+###List with used technologies, ex:
 
 Python
 Pandas
 MySQL
 Project Description
 
-Paragraph with a description of the dataset, sources, characteristics ,etc.
+###Paragraph with a description of the dataset, sources, characteristics ,etc.
 
-Steps
+###Steps
 
-Add here any insights you had during the project
+###Add here any insights you had during the project
 
-Conclusion
+###Conclusion
 
-Final conclusion
+##Final conclusion
 
-Contact
+###Contact
 
 linkedin, github, medium, etc
