@@ -9,7 +9,7 @@ To practice tools and procedures learned during data cleaning and manipulation c
 
 ### Paragraph with introduction/ objective of project
 
-Sharks are one of the most feared creatures in the world. The goal of this dataset is to inform people about the risks associated with coastal water activities and to improve shark/human relations by educating people on factors that contribute to shark attacks. The analysis looked, specially, into the relationship with the moon phases, seasons of the year and ocean temperature.
+Sharks are one of the most feared creatures in the world. The goal of this dataset is to inform people about the risks associated with coastal water activities and to improve shark/human relations by educating people on factors that contribute to shark attacks. The analysis looked, specially, into the relationship between the number of events and the moon phases, the seasons of the year and the ocean temperature.
 
 ### Methods
 First cleaning
