@@ -24,8 +24,7 @@ More cleaning and preparing data to answer the second question
 Function declaration
 Manipulation (drop, replace, merge)
 Grouping
-Visualization
-Technologies
+Visualization (next step) 
 
 ### List with used technologies, ex:
 
@@ -37,32 +36,13 @@ Pandas
 It was used 3 datasets, all of them found on Kaggle:
 Shark Attack - A table of shark attack incidents compiled by the Global Shark Attack File.
 Moon Calendar - The full moon is the lunar phase when the Moon appears fully illuminated from Earth's perspective. There are exactly 1,867 full moons between 1900 and 2050. 
-Land-Ocean - The change in global surface temperature relative to 1951-1980 average temperatures in data from Nasa. 
+(next step) Land-Ocean - The change in global surface temperature relative to 1951-1980 average temperatures in data from Nasa. 
 
 
 
 ### Steps
 
-### Add here any insights you had during the project
-
-month sazonality
-number of cases increased through the time
-
-### Conclusion
-
-7     623
-8     553
-9     524
-1     499
-6     473
-4     426
-12    422
-10    414
-3     383
-11    379
-5     367
-2     359
-
+#quantos ataques aconteceram por ano
 2015    141
 2017    137
 2016    129
@@ -83,10 +63,76 @@ number of cases increased through the time
 2003     85
 1959     78
 1962     75
+Name: year2, dtype: int64
+
+#em qual mês aconteceu mais ataques
+shark['month'].value_counts()
+7     623
+8     553
+9     524
+1     499
+6     473
+4     426
+12    422
+10    414
+3     383
+11    379
+5     367
+2     359
+
+
+
+#intervalo de tempo entre um ataque e outro
+median-5
+np.median(np.diff(shark['date_clean']))
+x = np.timedelta64(432000000000000, 'ns')
+days = x.astype('timedelta64[D]')
+days / np.timedelta64(1, 'D')
+
+mean - 18
+x = np.timedelta64(1567679187181249, 'ns')
+days = x.astype('timedelta64[D]')
+days / np.timedelta64(1, 'D')
+
+max - 36515
+
+
+#em quantos dias houve ataques - 4752
+len(shark['date_clean'].unique())
+
+#numero de dias com mais de um ataque
+sum(shark.groupby('date_clean').count()['case_number']!=1)
+575
+
+#primeira ideia era verificar se havia variação entre estações do ano e número de ataques
+#dificuldade diferentes estações de acordo com o hemisfério sul e norte
+#lua e influencia nas mares (muda o visual, mas a fase é a mesma em todo planeta)
+
+
+
+#tubarão é o lobisomen dos mares? 
+
+crescente    1296
+minguante    1249
+nova         1240
+cheia        1179
+
+
+### Add here any insights you had during the project
+
+month sazonality (seasons) australia e eua
+number of cases increased through the years - ocean_temperature (next question)
+
+
+
+
+### Conclusion
+
+This phenomenon varied over time 
 
 ## Final conclusion
 
-It seems to us that there is a significant correlation between case numbers and time variables
+It seems to us that there is a  between case numbers and time variables
 
 ### Contact
 
